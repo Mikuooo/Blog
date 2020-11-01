@@ -1,0 +1,15 @@
+
+html {
+    font-size: 10px;
+    font-family: 'Microsoft YaHei', serif;
+}
+
+header {
+    height: 7rem;
+    background-color: #39c5bb;
+}
+
+.banner {
+    height: 30rem;
+    background-color: azure;
+}

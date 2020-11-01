@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章1</title>
+    <link href="style/css/reset.css" rel="stylesheet">
+    <link href="style/css/common.css" rel="stylesheet">
+    <link href="style/css/article.css" rel="stylesheet">
+    <link href="style/css/article-edit.css" rel="stylesheet">
+    <script src="lib/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'div.textarea',
+            language: 'zh_CN',
+            // 内联模式
+            // inline: true,
+            // 插件配置
+            plugins: ['image', 'code'],
+            toolbar:'undo redo forecolor bold italic | alignleft aligncenter alignright | code',
+            formats: {
+                alignright: {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'right'},
+                bold: {inline:'span', styles:{color:'#f00'} },
+                forecolor: {inline : 'span', styles : {color:'%value',fontWeight:'700'} },
+                custom_format: {block : 'h1', attributes : {title:'Header'}, styles : {color:'red'} }
+            },
+            // 自动获取焦点
+            auto_focus: true,
+
+            // plugins: [ 'quickbars' ],
+            // toolbar: false,
+            menubar: false,
+            inline: true,
+            skin: 'oxide-dark',
+            min_width: '100%',
+            setup: function (){
+                console.log('编辑器即将初始化');
+            },
+            //
+            init_instance_callback: function (editor){
+                console.log(editor);
+            },
+            // 后端处理图片接口
+            images_upload_url: '',
+
+        });
+    </script>
+</head>
+<body>
+
+<!--头部开始-->
+<header>
+
+</header>
+<!--头部结束-->
+
+<!--主体部分开始-->
+<main>
+    <!--banner部分开始-->
+    <section class="banner">
+        <div class="container">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+    <section class="article-edit">
+        <article class="container">
+            <div class="tool"></div>
+            <div class="textarea"></div>
+        </article>
+    </section>
+</main>
+<!--主体部分开始-->
+
+<!--底部开始-->
+<footer>
+
+</footer>
+<!--底部开始-->
+<script src="script/js/article-edit.js"></script>
+</body>
+</html>

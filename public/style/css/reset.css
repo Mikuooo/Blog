@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body, ul, p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+input, textarea {
+    outline: none;
+    resize: none;
+}
+
+.container {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+.text-bold {
+    font-weight: 700;
+}
